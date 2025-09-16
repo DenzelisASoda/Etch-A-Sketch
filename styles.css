@@ -1,0 +1,122 @@
+:root {
+    --black: #1D242B;
+    --blue: #0077C0;
+    --lightblue: #C7EEFF;
+    --white: #FAFAFA;
+    --blacklight: #1D242B50;
+}
+
+* {
+    font-family: Poppins, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.caption {
+    font-size: 14px;
+    color: var(--blacklight);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding-inline: 550px;
+}
+
+.header h1 {
+    font-weight: 400;
+    color: var(--black);
+}
+
+.header p {
+    color: var(--blacklight);
+    font-size: 14px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+    width: 100%;
+}
+
+.container .utilities {
+    max-width: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.utilities div {
+    padding: 10px;
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.utilities input {
+    width: 100%;
+    font-size: 24px;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+.container .drawing-area {
+    border: 2px solid var(--black);
+    flex: 1;
+    height: 500px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drawing-area .grid {
+    border: 2px solid var(--black);
+    width: 93%;
+    height: 93%;
+}
+
+.container .tools {
+    max-width: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tools .color {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    max-width: 40px;
+    border: 2px solid var(--black);
+    border-radius: 12px;
+}
+
+.color .color-picker {
+    padding: 15px;
+    border: 2px solid var(--black);
+    border-radius: 6px;
+    background-color: var(--blue);
+}
+
+.tools .tool {
+    border: 2px solid var(--black);
+    padding: 13px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
