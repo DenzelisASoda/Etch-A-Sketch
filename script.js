@@ -5,7 +5,7 @@ const pencil = document.querySelector(".pencil");
 const eraser = document.querySelector(".eraser");
 
 // creating the grid boxes each time a user enters a value
-gridSize.addEventListener("input", () => {
+function generateGrid() {
   grid.innerHTML = "";
   if (gridSize.value > 64) {
     grid.innerHTML =
@@ -20,4 +20,52 @@ gridSize.addEventListener("input", () => {
       grid.appendChild(gridbox);
     }
   }
+}
+
+// function to color the grid
+function colorGrid() {
+  const colorPicker = document.querySelector(".color-picker");
+  const gridBoxes = document.querySelectorAll(".box");
+  console.log(gridBoxes);
+  gridBoxes.forEach((grid) => {
+    grid.addEventListener("mouseover", () => {
+      grid.style.backgroundColor = colorPicker.value;
+      colorPicker.style.backgroundColor = colorPicker.value;
+    });
+  });
+}
+
+// function to set up eraser
+function eraseBox() {
+  const colorPicker = document.querySelector(".color-picker");
+  const gridBoxes = document.querySelectorAll(".box");
+  console.log(gridBoxes);
+  gridBoxes.forEach((grid) => {
+    grid.addEventListener("mouseover", () => {
+      grid.style.backgroundColor = "white";
+      colorPicker.style.backgroundColor = colorPicker.value;
+    });
+  });
+}
+
+// calling the generateGrid function through input change
+gridSize.addEventListener("input", () => {
+  generateGrid();
+});
+
+// checking the pencil active event to activate drawing mode
+pencil.addEventListener("click", () => {
+  colorGrid();
+});
+
+// checking for the eraser active event to activate the eraser mode
+eraser.addEventListener("click", () => {
+  eraseBox();
+});
+
+// checking for eraser click to wipe the board
+reset.addEventListener("click", () => {
+  document.querySelectorAll(".box").forEach((box) => {
+    box.style.backgroundColor = "white";
+  });
 });

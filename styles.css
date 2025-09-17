@@ -19,7 +19,6 @@
 
 .reset, .pencil, .eraser, .color-picker {
     cursor: pointer;
-    letter-spacing: none;
 }
 
 .grid {
@@ -29,7 +28,7 @@
 .grid .box {
     flex: 1;
     height: 100%;
-    border: 1px solid var(--blacklight);
+    border: 1px solid #1D242B10;
 }
 
 body {
@@ -95,6 +94,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-color: white;
 }
 
 .drawing-area .grid {
