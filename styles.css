@@ -17,6 +17,20 @@
     color: var(--blacklight);
 }
 
+.reset, .pencil, .eraser, .color-picker {
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid .box {
+    flex: 1;
+    height: 100%;
+    border: 1px solid var(--blacklight);
+}
+
 body {
     height: 100vh;
     display: flex;
